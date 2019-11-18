@@ -1,0 +1,110 @@
+*, *::after, *::before {
+    padding:0;
+    margin:0;
+}
+
+body {
+    display: flex;
+    /* flex: 1; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 20rem;
+    height: 20rem;
+    border: 10px solid steelblue;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.clockFace {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+
+.clockFace .number {
+    --degree: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    transform: rotate(var(--degree));
+}
+
+.clockFace .number1 {--degree: 30deg;}
+.clockFace .number2 {--degree: 60deg;}
+.clockFace .number3 {--degree: 90deg;}
+.clockFace .number4 {--degree: 120deg;}
+.clockFace .number5 {--degree: 150deg;}
+.clockFace .number6 {--degree: 180deg;}
+.clockFace .number7 {--degree: 210deg;}
+.clockFace .number8 {--degree: 240deg;}
+.clockFace .number9 {--degree: 270deg;}
+.clockFace .number10 {--degree: 300deg;}
+.clockFace .number11 {--degree: 330deg;}
+.clockFace .number12 {--degree: 360deg;}
+
+.clockHand {
+    --rotation: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom;
+    transition: all 0.03s;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+}
+
+#hoursHand {
+    width: 5px;
+    height: 30%;
+    background-color: black;
+}
+
+#secondsHand {
+    height: 51%;
+    width: 2px;
+    background: red;
+}
+
+#minutesHand {
+    width: 3px;
+    height: 43%;
+    background-color: black;
+}
+
+.clockFace::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: black;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.brand{
+    position: absolute;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 700;
+    font-size: 25px;
+    top: 40%;
+    z-index: -1;
+}
