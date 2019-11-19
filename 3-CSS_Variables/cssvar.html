@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cssvar.css">
+    <title>Change CSS var </title>
+</head>
+<body>
+        <header>
+            use <span id="title">js</span> to change the css
+        </header>
+
+        <div class="actions-container">
+            <div class="actions">Spacing: <span><input  name="padd" type="range" min="5" max="150" value = "10" data-sizing="px"></span></div>
+            <div class="actions">Blur: <span><input name="blur" type="range" min="0" max="15" value="5" data-sizing="px"></span></div>
+            <div class="actions">Base Color: <span><input name="color" type="color" value="#FFFF68"></span></div>
+        </div>
+
+
+        <div class="img-container" id="img-container">
+            <div id="image"></div>
+        </div>
+
+
+
+    <script src="cssvar.js"></script>
+</body>
+</html>
