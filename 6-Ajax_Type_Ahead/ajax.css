@@ -1,0 +1,87 @@
+:root {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Nunito sans', sans-serif;
+    background-color: teal;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+::placeholder {
+    color: black;
+    opacity: 0.3;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.search-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8% auto;
+    
+}
+
+.search-input {
+    min-width: 500px;
+    padding: 25px;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    outline: 0;
+    border: 8px solid rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.42), inset 0 0 3px  rgba(0,0,0,0.3);
+    z-index: 2;
+                
+}
+
+
+#suggestions-box {
+    margin: 0;
+    position: relative;
+    width: 400px;
+}
+
+#suggestions-box li {
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid rgb(247, 247, 247);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.42);
+    margin: 0;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    transition: background 0.5s;
+
+}
+
+#suggestions-box li:nth-child(even) {
+    transform: perspective(150px) rotateX(2deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+  }
+  
+#suggestions-box li:nth-child(odd) {
+    transform: perspective(150px) rotateX(-2deg) translateY(3px);
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+  }
+  
+  span.population {
+    font-size: 15px;
+  }
+  
+  .hl {
+    background: teal;
+  }
+  
