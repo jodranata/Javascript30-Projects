@@ -1,0 +1,55 @@
+:root {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: whitesmoke
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: teal;
+}
+
+.check-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8% auto 0 auto;
+}
+
+.check-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    margin: 0;
+    
+}
+
+.check-div p {
+    padding: 20px;
+    border-left: 1px solid rgb(167, 167, 167);
+    letter-spacing: 3px;
+    width: 100%;;
+}
+
+input[type="checkbox"] {
+    margin: 20px;
+}
+
+input:checked + p {
+    text-decoration: line-through;
+    background-color: rgb(243, 243, 243);
+}
+
+
