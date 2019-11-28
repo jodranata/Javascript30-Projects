@@ -1,0 +1,126 @@
+:root {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+header {
+    margin: 0 0 25px 0;
+    width: 100vw;
+    height: 750px;
+    border: solid 1px black;
+    background: gray;
+    background-image: url('./95677.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header-container {
+    background: rgba(128, 128, 128, 0.219);
+    height: 100%;
+
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 7.3px;
+    padding-top: 2.5%;
+    /* background: linear-gradient(150deg, rgba(0,0,0,0.32) 78%,  rgba(0,0,0,0.51) 89%, rgba(0,0,0,0.27) 95%); */
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    opacity: 1;
+}
+
+.nav-links {
+    margin: 5px 10px;
+    color: whitesmoke;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    flex: 10;
+}
+
+.title-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    margin-left: 10%;
+    font-size: 5rem;
+    color: whitesmoke;
+    text-shadow: 1px 1px 5px black;
+}
+
+.main-section {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.content {
+    width: 80%;
+    padding: 2%;
+    margin: 20px auto;
+    position: relative;
+}
+
+
+
+.content.rightImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content p {
+    padding: auto 10px;
+    margin: 10px 25px;
+    text-align: justify;
+}
+
+.content.leftImage {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.slide-in {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.align-left.slide-in {
+    transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+    transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+}
