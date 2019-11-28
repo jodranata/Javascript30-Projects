@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type anything</h1>
+
+<script>
+let isItBingo = [];
+let bingoKeyWord = 'bingo';
+function bingo(e) {
+       isItBingo.push(e.key);
+       console.log(isItBingo);
+       isItBingo.splice(-bingoKeyWord - 1, isItBingo.length - bingoKeyWord.length); //when isItBingo is more than the bingoKeyword Lengt, it will be trimmed
+       if (isItBingo.join('') === 'bingo') console.log('YOUWIIIN');
+       
+    }
+window.addEventListener('keyup', bingo);    
+
+
+    
+    
+    
+</script>
+</body>
+</html>
