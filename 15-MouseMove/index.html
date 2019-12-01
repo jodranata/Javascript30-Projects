@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mousemooove</title>
+</head>
+<body>
+    <div class="container">
+         <h1 class="text">some text</h1>
+    </div>
+    
+   <style>
+   html {
+       color: black;
+   }
+
+   body {
+       margin:0;
+       padding: 0;
+   }
+
+   .container {
+       min-width: 100vw;
+       min-height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   h1 {
+    text-shadow: 10px 10px 0 rgba(0,0,0,1);
+    font-size: 120px;
+    text-transform: uppercase;
+   }
+
+   </style>
+
+   <script>
+   const container_div = document.querySelector('.container');
+   const text_h1 = container_div.querySelector('.text');
+   const stretch = 200;
+
+   function editShadow(e) {
+    const { offsetWidth: width, offsetHeight: height} = container_div;
+    let { offsetX: x, offsetY: y } = e;
+    if(this !== e.target) {
+        x += e.target.offsetLeft;
+        y += e.target.offsetTop;
+    }
+    let xStretch = Math.round((x/width * stretch) - (stretch/2));
+    let yStretch = Math.round((y/height * stretch) - (stretch/2));
+    text_h1.style.textShadow = `
+        ${xStretch}px ${yStretch}px 0 rgba(255,0,255,0.7),
+        ${xStretch * -1}px ${yStretch}px 0 rgba(0,255,255,0.7),
+        ${yStretch}px ${xStretch * -1}px 0 rgba(0,255,0,0.7),
+        ${yStretch * -1}px ${xStretch}px 0 rgba(0,0,255,0.7)
+    
+    
+    `;
+   }
+   container_div.addEventListener('mousemove', editShadow);
+   
+   </script>
+
+</body>
+</html>
