@@ -1,0 +1,35 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-image: url('./bandsbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    background-image: linear-gradient(110deg, rgb(250, 246, 246) 35% , rgb(247, 247, 247) 72%, rgb(255,255,255) 95%);
+    width: 35%;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px rgba(255,255,255,0.35);
+    padding: 20px 15px;
+}
+
+li {
+    margin: 5px auto;
+    padding: 0 3px;
+    list-style: none;
+    border-bottom: 2px solid rgba(38, 65, 65, 0.5);
+}

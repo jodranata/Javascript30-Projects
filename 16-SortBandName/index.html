@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorted Bands Name</title>
+</head>
+<body>
+    
+   <ul id="bands"></ul>
+
+   <script>
+   const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+   
+   function remove(name) {
+      return name.replace(/^(the |a |an )/i, '');
+   }
+   
+   function sortBandsName(bandName) {
+      const sortedBands = Array.from(bandName.sort((a,b) => remove(a) > remove(b) ? 1 : -1));
+      document.getElementById('bands').innerHTML = 
+         sortedBands.map(name=> `<li>${name}</li>`)
+               .join('');
+   }
+
+   sortBandsName(bands);
+    </script>    
+</body>
+</html>
