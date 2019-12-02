@@ -7,7 +7,7 @@ const citiesDatabase = [];
 const databasePromise = fetch(endpoint)
   .then(blob => blob.json()) // response type from the url
   .then(data => citiesDatabase.push(...data));
-
+console.log(databasePromise);
 //  search cities/state based on criteria(chars)
 
 function searchCities(inputChar, database) {
