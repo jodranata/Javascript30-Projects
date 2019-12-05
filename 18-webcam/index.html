@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Webcam Fun</title>
+</head>
+<body>
+  <div class="photobooth">
+    <div class="controls">
+      <button class="screenshot">Take Photo</button>
+      <button class="access-video">Access video</button>
+      <button class="display-video">Display</button>
+      <button class="start-recording">Record webcam</button>
+      <button class="stop-recording">Stop record webcam</button>
+      <button class="record-canvas">record canvas</button>
+      <button class="stop-canvas">stop canvas</button>
+
+      <select name="filter" class="dropdown">
+        <option value="">No Filter</option>
+        <option value="redEffect">Red Effect</option>
+        <option value="rgbSplit">RGB Split</option>
+        <option value="greenScreen">Green Screen</option>
+      </select>
+      <div class="rgb">
+        <label for="rmin">Red Min:</label>
+        <input type="range" min=0 max=255 name="rmin">
+        <label for="rmax">Red Max:</label>
+        <input type="range" min=0 max=255 name="rmax">
+
+        <br>
+
+        <label for="gmin">Green Min:</label>
+        <input type="range" min=0 max=255 name="gmin">
+        <label for="gmax">Green Max:</label>
+        <input type="range" min=0 max=255 name="gmax">
+
+        <br>
+
+        <label for="bmin">Blue Min:</label>
+        <input type="range" min=0 max=255 name="bmin">
+        <label for="bmax">Blue Max:</label>
+        <input type="range" min=0 max=255 name="bmax">
+      </div>
+    </div>
+
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+  <audio class="snap" src="./camera-shutter-click-01.mp3"></audio>
+
+<script src="./newutilswebcam.js"></script>
+</body>
+</html>
