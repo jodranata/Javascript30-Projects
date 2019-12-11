@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Speech Synthesis</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Speech Synthesis</h1>
+    <select name="voices" id="voice-type">
+      <option value="">Select Your Voice</option>
+    </select>
+    
+    <label for="rate">Rate: </label>
+    <input type="range" name="rate" id="rate" class="modifier-input" min="0" max="3" value="1" step="0.1">
+    <label for="pitch">Pitch: </label>
+    <input type="range" name="pitch" id="pitch" class="modifier-input" min="0" max="2" step="0.1">
+
+    <textarea name="text" id="input-text">Type in here...</textarea>
+    
+    <button class="button-speak">Speak</button>
+    <button class="button-stop">Stop</button>
+
+
+  </div>
+
+<script src="./speechsynthesis.js"></script>
+</body>
+</html>
