@@ -1,0 +1,213 @@
+:root {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(236, 236, 236);
+}
+
+
+
+.header {
+  width: 100%;
+  height: 420px;
+  background-image: url(./header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-bar {
+  position: absolute;
+  top:0;
+  left: 0;
+  /* background-color: rgb(44, 40, 39); */
+  background-color: transparent;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.nav-container {
+  display: flex;
+  list-style: none;
+  color: whitesmoke;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-links {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+#brand a {
+  max-width: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  overflow: hidden;
+  background: rgb(207, 238, 236);
+  transition: all 0.5s;
+  padding: 20px 0;
+}
+
+.container-text {
+  max-width: 70%;
+  text-align: justify;
+  margin: 35px auto;
+  padding: 5% 7%;
+  background-color: white;
+  box-shadow: 0 0 17px 2px rgba(0,0,0,0.35);
+  font-size: 17px;
+  line-height: 1.7;
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
+.fixed nav {
+  position: fixed;
+  box-shadow: 0 0 8px 2px rgba(0,0,0,0.35);
+  
+  background-color: rgb(248, 53, 53) ;
+  z-index: 1;
+}
+
+.fixed .container-text {
+  transform:scale(1);
+  transition: transform 0.3s;
+}
+
+.fixed #brand a {
+  max-width: 250px;
+  color: rgb(248, 53, 53) ;
+  padding: 20px 20px;
+}
+
+.nav-links a {
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(230, 50, 50);
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.fixed .nav-links a {
+  color: rgb(190, 220, 235);
+}
+
+
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  top: -20px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  will-change: opacity;
+  display: none;
+  z-index: 2;
+}
+
+.trigger-enter .dropdown {
+  display: block;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.dropdownBackground {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background: rgb(37, 37, 37);
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  z-index: 1;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: rgb(37, 37, 37);
+  transform: translateY(-50%) rotate(45deg);
+  transition: left 0.2s;
+}
+
+
+.about {
+  max-width: 500px;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+.dropdown1 {
+  left: 0;
+}
+
+.about img{
+  max-width: 200px;
+  margin: 5px 15px;
+  float: left;
+}
+
+ol {
+  text-align: justify;
+  line-height: 1.5;
+  max-width: 300px;
+  padding: 15px 20px;
+}
+
+ol li {
+  margin: 10px auto;
+}
+
+.jack-lines {
+  padding: 10px 20px;
+}
+
+.jack-lines p {
+  text-align: justify;
+}
+
+.hoverAbout {
+  content : "";
+}
+
+.hoverAbout .arrow {
+  left: 15%;
+}
+
+.fixed .hoverAbout .arrow {
+  left: auto;
+  transform: translate(-100%, -50%) rotate(45deg);
+}
+
