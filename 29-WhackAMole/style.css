@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: rgb(238,174,174);
+  background: linear-gradient(304deg, rgba(238,174,174,1) 11%, rgba(180,215,67,1) 49%, rgba(233,148,171,1) 97%);
+  font-family: 'Amatic SC', cursive;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 7rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.button-container {
+  margin: 15px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-game {
+  margin: 5px 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Amatic SC', cursive;
+  cursor: pointer;
+}
+
+.buttons-game.start-button {
+  display: block;
+  margin: 0px auto;
+  width: 120px;
+  border: none;
+  padding:0;
+  font-size: 3.5rem;
+  opacity: 0;
+  cursor: default;
+}
+
+.buttons-game.start-button.selected {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.start-container p {
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+  margin: 0;
+}
+
+.buttons-game:hover {
+  color: rgb(59,153,252);
+  text-shadow: 0 0 5px 1px (rgba(255,255,255,0.2))
+}
+
+.buttons-game:focus {
+  outline: none;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 95%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('mole.svg') bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: top 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.hard .mole {
+  left: 30%;
+}
+
+.hard .hole::after {
+  width: 105%;
+  height: 85px;
+}
+
+.hard .mole{
+  width: 35%;
+  height: 35%;
+}
+
+.hard .hole.up .mole {
+  top: 40%;
+  /* left: 30%; */
+}
